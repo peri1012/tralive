@@ -1,0 +1,15 @@
+@mixin button($bgrClr, $pad){
+    margin:25px 0 25px 40px;
+    background-color: $bgrClr;
+    color:#fff;
+    border-radius: 5px;
+    padding: $pad;
+    display: inline-block;
+    transition: .3s ;
+    &:hover{
+        opacity: 0.8;
+        color:#fff;
+        text-decoration: none;
+        text-underline-offset:0;
+    }
+}

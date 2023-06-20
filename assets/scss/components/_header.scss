@@ -1,0 +1,91 @@
+@import '../mixins';
+header{
+    padding: 0 30px;
+    nav{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        .menu{
+            display: flex;
+            .main-menu{
+                display:flex;
+                gap:40px;
+                .menu-item{
+                    a{
+                        font-size: 16px;
+                        font-weight: 500;
+                        display:inline-block;
+                        color:#00095E;
+                        padding: 39px 2px;
+                        transition: all .3s ;
+                        &:hover{
+                            color: #0056b3;
+                            text-decoration: underline;
+                            text-underline-offset: 13px;
+                        }
+                    }
+                }
+                .dropdown{
+                    a{
+                        font-size: 16px;
+                        font-weight: 500;
+                        display:inline-block;
+                        color:#00095E;
+                        padding: 39px 2px;
+                        transition: all .3s ;
+                        &:hover{
+                            color: #0056b3;
+                            text-decoration: underline;
+                            text-underline-offset: 13px;
+                        }
+                    }
+                    .dropdown-items{
+                        position: absolute;
+                        visibility: hidden;
+                        margin-left: 7px;
+                        background-color: #00095e;
+                        box-shadow: 0 0 10px 3px rgba(0,0,0,0.05);
+                        a{
+                            color:white;
+                            font-size: 16px;
+                            font-weight: 500;
+                            width:170px;
+                            padding: 17px;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    &:hover{
+                        .dropdown-items{
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            .phone{
+                @include button(#FFC800,13px 30px);
+
+                
+            }
+            // .phone{
+            //         margin:25px 0 25px 40px;
+            //         background-color: #FFC800;
+            //         color:#fff;
+            //         border-radius: 5px;
+            //         padding: 13px 30px;
+            //         display: inline-block;
+            //         transition: .3s ;
+            //         i{
+            //             padding-right:9px;
+            //         }
+            //         &:hover{
+            //             opacity: 0.8;
+            //             color:#fff;
+            //             text-decoration: none;
+            //             text-underline-offset:0;
+            //         }
+            //     }
+        }
+    }
+}

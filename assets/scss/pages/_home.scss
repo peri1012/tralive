@@ -1,0 +1,81 @@
+@import '../mixins';
+main{
+    .hero{
+        .hero-details{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:10px;
+            padding-top: 50px;
+            h1{
+                font-size: 50px;
+                text-align: center;
+                span{
+                    margin:8px 0;
+                    hr{
+                        border: 5px solid #FFC800;
+                        margin-top: -20px;
+                        width:100px;
+                    }
+                }
+            }
+            p{
+                font-size: 20px;
+                margin-bottom: 30px;
+                font-family: 'Roboto', sans-serif;
+            }
+            .hero-button{
+                @include button(#00095e,35px 60px);
+            }
+        }
+    }
+    .events{
+        .container{
+            .row{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .instagram{
+        .row{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            .col-items{
+                position: relative;
+                img{
+                    width:100%;
+                    height: auto;
+                    display: block;
+                    opacity: 1;
+                    transition: .5s ease;
+                    backface-visibility: hidden;
+                }
+                .insta-hover{
+                    position: absolute;
+                    transition: .5s ease;
+                    opacity: 0;
+                    font-size: 30px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    i{
+                        color: #fff;
+                    }
+                }
+                &:hover{
+                    img{
+                        opacity: 0.8;
+                    }
+                    .insta-hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

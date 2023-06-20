@@ -1,0 +1,95 @@
+footer{
+    background-color: #1a2d6d;
+    .container{
+        .row{
+            display: flex;
+            flex-direction: column;
+            padding-top:114px;
+            .footer-top{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .footer-part{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 15px;
+                    p{
+                        color: #8A8FBE;
+                        font-size: 16px;
+                        margin:35px 0 21px 0;
+                        line-height: 1.8;
+                    }
+                    .social-medias{
+                        a{
+                            color: #fff;
+                            font-size: 22px; 
+                            padding: 9px;                   
+                        }
+                        margin-bottom: 40px;
+                    }
+                    h4{
+                        color: #fff;
+                        font-size: 17px;
+                        margin-bottom: 28px;
+                        font-weight: 700;
+                    }
+                    ul{
+                        li{
+                            margin-bottom: 15px;
+                            a{
+                                color:#8A8FBE;
+                                font-size: 16px;
+                                transition: .3s;
+                                &:hover{
+                                    color:#fff;
+                                    text-decoration: underline;
+                                }
+                            }
+                            .mobile-phone{
+                                color:#FFC800;
+                                font-size: 22px;
+                                font-weight: 400;
+                                transition: .3s;
+                                &:hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-bottom{
+                padding: 45px 0 20px 0;
+                p{
+                    text-align: center;
+                    font-size: 14px;
+                    color:#8A8FBE;
+                    i{
+                        color:#7EA0FF;
+                    }
+                    a{
+                        color:#FFC800;
+                    }
+                }
+            }
+        }
+    }
+    .go-top{
+        background: #7EA0FF;
+        height: 50px;
+        width: 50px;
+        right: 31px;
+        bottom: 18px;
+        position: fixed;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 48px;
+        font-size: 20px;
+        border: 2px solid transparent;
+        box-shadow: 0 0 10px 3px rgba(108,98,98,0.2);
+        i{
+            color:#fff;
+        }
+    }
+}
+
