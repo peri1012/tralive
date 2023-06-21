@@ -1,0 +1,90 @@
+@import '../mixins';
+.faq{
+    padding-top:120px;
+    .container{
+        .row{
+            display: flex;
+            flex-direction: column;
+            gap:25px;
+            .faq-header{
+                text-align: center;
+                span{
+                    font-size:16px;
+                    color:#7EA0FF;
+                    margin-bottom:10px;
+                    display: inline-block;
+                    letter-spacing: 0.05em;
+                    font-weight: 400;
+                }
+                h2{
+                    font-size: 41px;
+                    font-family: "Josefin Sans",sans-serif;
+                    display: block;
+                    color: #00095E;
+                    font-weight: 700;
+                    line-height: 1.4;
+                    margin-bottom: 22px;
+                }
+            }
+            .faq-content{
+                display: grid;
+                grid-template-columns: auto auto;
+                .faq-content-left{
+                    width:480px;
+                    padding: 20px 15px 20px 0;
+                    .faq__detail {
+                        width:360px;
+                        border-bottom: 1px solid hsl(240, 5%, 91%);
+                        margin: 20px 0 0 0;
+                        .faq__summary{
+                            display: block;
+                            padding: 0;
+                            position: relative;
+                            color:  #010A44;
+                            font-size: 18px;
+                            font-family: "Josefin Sans",sans-serif;
+                            &:hover,
+                            &:active{
+                                color: #7EA0FF;
+                                cursor: pointer; 
+                            }
+                            &::before{
+                                display: inline-block;
+                                content: "+";
+                                font-size: 40px;
+                                line-height: 0.5em;
+                                text-align: center;
+                                padding-bottom: 20px;
+                                color:#7EA0FF;
+                                margin-right:20px;
+                            }
+                        }
+                        .faq__text{
+                            width:360px;
+                            padding: 20px 38px;
+                        }
+                    }
+                    details[open] .faq__summary:before {
+                        display: inline-block;
+                        width: 18px;
+                        height: 10px;
+                        content: "-";
+                    }
+                }
+                .faq-content-right{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .faq-bottom{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .faq-button{
+                    @include button(#FFC800, 30px 40px);
+                }
+            }
+        }
+    }
+}

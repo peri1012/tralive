@@ -1,10 +1,15 @@
 @import '../mixins';
 header{
-    padding: 0 30px;
     nav{
+        width:100%;
+        background-color: #fff;
         display:flex;
         justify-content: space-between;
         align-items: center;
+        position: fixed;
+        z-index: 1;
+        padding: 0 30px;
+        box-shadow: 0 10px 15px rgba(25,25,25,0.1);
         .menu{
             display: flex;
             .main-menu{

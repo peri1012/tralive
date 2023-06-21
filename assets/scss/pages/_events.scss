@@ -1,0 +1,50 @@
+main{
+            padding-top: 100px;
+            .about-hero{
+            width:100%;
+            height: 380px;
+            background-image:url('../images/h1_hero2.jpg.webp') ;
+            background-repeat: no-repeat;
+            color:white;
+            .container{
+                .row{
+                    height: 380px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .hero-content{
+                        h2{
+                            color: #fff;
+                            font-size: 60px;
+                            display: block;
+                            font-weight: 700;
+                            line-height: 1.4;
+                            font-family: "Josefin Sans",sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+        .events{
+            padding: 120px 0 0 0;
+            .container{
+                .row{
+                    display: flex;
+                    .slider-cards{
+                        display: flex;
+                        flex-direction: column;
+                        .card-top{
+                            flex-direction: row;
+                            display: flex;
+                            gap:30px;
+                        }
+                        .card-bottom{
+                            flex-direction: row;
+                            display: flex;
+                            gap:30px;
+                        }
+                    }
+                }
+            }
+        }
+        }

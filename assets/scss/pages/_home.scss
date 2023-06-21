@@ -1,6 +1,7 @@
 @import '../mixins';
 main{
     .hero{
+        width:100%;
         .container{
             .hero-details{
                 display: flex;
@@ -8,7 +9,7 @@ main{
                 justify-content: center;
                 align-items: center;
                 gap:10px;
-                padding-top: 50px;
+                padding-top: 150px;
                 h1{
                     font-size: 50px;
                     text-align: center;
@@ -73,15 +74,5 @@ main{
             }
         }
     }
-    .events{
-        .container{
-            .row{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding-top: 120px;
-            }
-        }
-    }
     
+
