@@ -1,32 +1,75 @@
 @import '../mixins';
 main{
     .hero{
-        .hero-details{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap:10px;
-            padding-top: 50px;
-            h1{
-                font-size: 50px;
-                text-align: center;
-                span{
-                    margin:8px 0;
-                    hr{
-                        border: 5px solid #FFC800;
-                        margin-top: -20px;
-                        width:100px;
+        .container{
+            .hero-details{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap:10px;
+                padding-top: 50px;
+                h1{
+                    font-size: 50px;
+                    text-align: center;
+                    span{
+                        margin:8px 0;
+                        hr{
+                            border: 5px solid #FFC800;
+                            margin-top: -20px;
+                            width:100px;
+                        }
                     }
                 }
+                p{
+                    font-size: 20px;
+                    margin-bottom: 30px;
+                    font-family: 'Roboto', sans-serif;
+                }
+                .hero-button{
+                    @include button(#00095e,35px 60px);
+                }
             }
-            p{
-                font-size: 20px;
-                margin-bottom: 30px;
-                font-family: 'Roboto', sans-serif;
-            }
-            .hero-button{
-                @include button(#00095e,35px 60px);
+        }
+        .hero-background{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            height: 700px;
+            background-image: url("../images/h1_hero1.png.webp");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            .container{
+                .row{
+                    display: flex;
+                    justify-content: center;
+                    .car-moving{
+                        position: relative;
+                        bottom:100px;
+                        animation: move 10s linear infinite alternate;
+                        img{
+                            width:610px;
+                            height:301px;
+                        }
+                        @keyframes move {
+                            0%{
+                                transform: translate(0,0);
+                            }
+                            50%{
+                                transform: translate(-100px,0);
+                            }
+                            80%{
+                                transform: translate(100px,0);
+                            }
+                            100%{
+                                transform: translate(0,0);
+                            }
+                        }
+                        }
+                    }
+                }
             }
         }
     }
@@ -37,45 +80,8 @@ main{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                padding-top: 120px;
             }
         }
     }
-    .instagram{
-        .row{
-            display: grid;
-            grid-template-columns: auto auto auto auto auto;
-            .col-items{
-                position: relative;
-                img{
-                    width:100%;
-                    height: auto;
-                    display: block;
-                    opacity: 1;
-                    transition: .5s ease;
-                    backface-visibility: hidden;
-                }
-                .insta-hover{
-                    position: absolute;
-                    transition: .5s ease;
-                    opacity: 0;
-                    font-size: 30px;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    text-align: center;
-                    i{
-                        color: #fff;
-                    }
-                }
-                &:hover{
-                    img{
-                        opacity: 0.8;
-                    }
-                    .insta-hover{
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-}
+    

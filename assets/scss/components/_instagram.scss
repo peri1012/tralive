@@ -1,0 +1,38 @@
+.instagram{
+    .row{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        .col-items{
+            position: relative;
+            img{
+                width:100%;
+                height: auto;
+                display: block;
+                opacity: 1;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+            .insta-hover{
+                position: absolute;
+                transition: .5s ease;
+                opacity: 0;
+                font-size: 30px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                i{
+                    color: #fff;
+                }
+            }
+            &:hover{
+                img{
+                    opacity: 0.8;
+                }
+                .insta-hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

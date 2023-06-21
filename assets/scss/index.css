@@ -4,16 +4,16 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
-  width: 86%;
+  width: 960px;
   margin: 0 auto;
   border: 1px solid red;
 }
 
-main .hero .hero-details {
+main .hero .container .hero-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,24 +21,24 @@ main .hero .hero-details {
   gap: 10px;
   padding-top: 50px;
 }
-main .hero .hero-details h1 {
+main .hero .container .hero-details h1 {
   font-size: 50px;
   text-align: center;
 }
-main .hero .hero-details h1 span {
+main .hero .container .hero-details h1 span {
   margin: 8px 0;
 }
-main .hero .hero-details h1 span hr {
+main .hero .container .hero-details h1 span hr {
   border: 5px solid #FFC800;
   margin-top: -20px;
   width: 100px;
 }
-main .hero .hero-details p {
+main .hero .container .hero-details p {
   font-size: 20px;
   margin-bottom: 30px;
   font-family: "Roboto", sans-serif;
 }
-main .hero .hero-details .hero-button {
+main .hero .container .hero-details .hero-button {
   margin: 25px 0 25px 40px;
   background-color: #00095e;
   color: #fff;
@@ -47,51 +47,57 @@ main .hero .hero-details .hero-button {
   display: inline-block;
   transition: 0.3s;
 }
-main .hero .hero-details .hero-button:hover {
+main .hero .container .hero-details .hero-button:hover {
   opacity: 0.8;
   color: #fff;
   text-decoration: none;
   text-underline-offset: 0;
 }
-main .events .container .row {
+main .hero .hero-background {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 700px;
+  background-image: url("../images/h1_hero1.png.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+main .hero .hero-background .container .row {
+  display: flex;
+  justify-content: center;
+}
+main .hero .hero-background .container .row .car-moving {
+  position: relative;
+  bottom: 100px;
+  animation: move 10s linear infinite alternate;
+}
+main .hero .hero-background .container .row .car-moving img {
+  width: 610px;
+  height: 301px;
+}
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-100px, 0);
+  }
+  80% {
+    transform: translate(100px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.events .container .row {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-main .instagram .row {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-}
-main .instagram .row .col-items {
-  position: relative;
-}
-main .instagram .row .col-items img {
-  width: 100%;
-  height: auto;
-  display: block;
-  opacity: 1;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
-}
-main .instagram .row .col-items .insta-hover {
-  position: absolute;
-  transition: 0.5s ease;
-  opacity: 0;
-  font-size: 30px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-main .instagram .row .col-items .insta-hover i {
-  color: #fff;
-}
-main .instagram .row .col-items:hover img {
-  opacity: 0.8;
-}
-main .instagram .row .col-items:hover .insta-hover {
-  opacity: 1;
+  padding-top: 120px;
 }
 
 header {
@@ -260,4 +266,88 @@ footer .go-top {
 }
 footer .go-top i {
   color: #fff;
+}
+
+.instagram .row {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.instagram .row .col-items {
+  position: relative;
+}
+.instagram .row .col-items img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.instagram .row .col-items .insta-hover {
+  position: absolute;
+  transition: 0.5s ease;
+  opacity: 0;
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.instagram .row .col-items .insta-hover i {
+  color: #fff;
+}
+.instagram .row .col-items:hover img {
+  opacity: 0.8;
+}
+.instagram .row .col-items:hover .insta-hover {
+  opacity: 1;
+}
+
+.about-us .container .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 100px 0;
+}
+.about-us .container .row .about-content span {
+  font-size: 16px;
+  color: #7EA0FF;
+  margin-bottom: 10px;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+.about-us .container .row .about-content h2 {
+  font-size: 41px;
+  font-family: "Josefin Sans", sans-serif;
+  display: block;
+  color: #00095E;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 22px;
+}
+.about-us .container .row .about-content p {
+  color: #677F8B;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.about-us .container .row .about-content .about-button {
+  margin: 25px 0 25px 40px;
+  background-color: #FFC800;
+  color: #fff;
+  border-radius: 5px;
+  padding: 30px 40px;
+  display: inline-block;
+  transition: 0.3s;
+  margin: 0;
+}
+.about-us .container .row .about-content .about-button:hover {
+  opacity: 0.8;
+  color: #fff;
+  text-decoration: none;
+  text-underline-offset: 0;
 }/*# sourceMappingURL=index.css.map */
