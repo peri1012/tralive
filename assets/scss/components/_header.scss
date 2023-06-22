@@ -89,3 +89,10 @@ header{
         }  
     }
 }
+@media (max-width:768px){
+    nav{
+        .main-menu{
+            display: none;
+        }
+    }
+}

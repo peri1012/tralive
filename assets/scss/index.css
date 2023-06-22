@@ -8,7 +8,7 @@
 }
 
 .container {
-  width: 1200px;
+  width: min(90%, 1200px);
   margin: 0 auto;
   border: 1px solid red;
 }
@@ -204,7 +204,7 @@ main .map .container .row {
 }
 main .map .container .row iframe {
   width: 100%;
-  height: 480px;
+  min-height: 480px;
 }
 main .contact-form {
   margin-bottom: 120px;
@@ -222,7 +222,7 @@ main .contact-form .container .row .contact {
   justify-content: space-between;
 }
 main .contact-form .container .row .contact .contact-right {
-  width: 770px;
+  max-width: 770px;
 }
 main .contact-form .container .row .contact .contact-right form {
   display: flex;
@@ -231,7 +231,7 @@ main .contact-form .container .row .contact .contact-right form {
 }
 main .contact-form .container .row .contact .contact-right form textarea {
   width: 100%;
-  height: 200px;
+  min-height: 200px;
   border-color: #e5e6e9;
 }
 main .contact-form .container .row .contact .contact-right form .mail {
@@ -241,22 +241,22 @@ main .contact-form .container .row .contact .contact-right form .mail {
 }
 main .contact-form .container .row .contact .contact-right form .mail input[type=text] {
   width: 50%;
-  height: 50px;
+  min-height: 50px;
   border-color: #e5e6e9;
 }
 main .contact-form .container .row .contact .contact-right form .mail input[type=email] {
   width: 50%;
-  height: 50px;
+  min-height: 50px;
   border-color: #e5e6e9;
 }
 main .contact-form .container .row .contact .contact-right form input[type=text] {
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   border-color: #e5e6e9;
 }
 main .contact-form .container .row .contact .contact-right form button {
   width: 150px;
-  height: 60px;
+  min-height: 60px;
   border: 1px solid #7EA0FF;
   background-color: #fff;
   color: #7EA0FF;
@@ -271,7 +271,7 @@ main .contact-form .container .row .contact .contact-right form button:hover {
   background-color: #7EA0FF;
 }
 main .contact-form .container .row .contact .contact-left {
-  width: 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -281,8 +281,8 @@ main .contact-form .container .row .contact .contact-left .contact-info {
   flex-direction: row;
 }
 main .contact-form .container .row .contact .contact-left .contact-info .contact-image {
-  width: 30px;
-  height: 30px;
+  max-width: 30px;
+  min-height: 30px;
   margin-right: 15px;
 }
 main .contact-form .container .row .contact .contact-left .contact-info .contact-image img {
@@ -308,6 +308,16 @@ main .contact-form .container .row .contact .contact-left .contact-info .contact
   font-style: italic;
 }
 
+@media (max-width: 768px) {
+  .contact-form {
+    height: 100%;
+  }
+  .contact-form .contact {
+    display: flex;
+    flex-direction: column !important;
+    gap: 30px;
+  }
+}
 header nav {
   width: 100%;
   background-color: #fff;
@@ -415,6 +425,11 @@ header nav .main-menu .dropdown:hover .dropdown-items {
   visibility: visible;
 }
 
+@media (max-width: 768px) {
+  nav .main-menu {
+    display: none;
+  }
+}
 footer {
   background-color: #1a2d6d;
 }
@@ -435,7 +450,7 @@ footer .container .row .footer-top .footer-part {
   padding: 0 15px;
 }
 footer .container .row .footer-top .footer-part p {
-  width: 370px;
+  max-width: 370px;
   color: #8A8FBE;
   font-size: 16px;
   margin: 35px 0 21px 0;
@@ -519,6 +534,11 @@ footer .go-top:hover {
   background-color: #1a2d6d;
 }
 
+@media (max-width: 768px) {
+  .container .row .footer-top {
+    flex-direction: column !important;
+  }
+}
 .instagram {
   margin-top: 60px;
 }
@@ -567,13 +587,13 @@ footer .go-top:hover {
   gap: 30px;
 }
 .about-us .container .row .about-image {
-  width: 570px;
+  max-width: 570px;
 }
 .about-us .container .row .about-image img {
   width: 100%;
 }
 .about-us .container .row .about-content {
-  width: 470px;
+  max-width: 470px;
 }
 .about-us .container .row .about-content span {
   font-size: 16px;
@@ -628,10 +648,18 @@ footer .go-top:hover {
   bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .container .row {
+    flex-direction: column;
+  }
+  .container .row .about-content h2 {
+    font-size: 24px !important;
+  }
+}
 .testimonial {
   margin: 60px 0;
   width: 100%;
-  height: 600px;
+  min-height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -646,7 +674,7 @@ footer .go-top:hover {
   color: #fff;
 }
 .testimonial .container .row .testimonial-content {
-  width: 990px;
+  max-width: 990px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -683,6 +711,26 @@ footer .go-top:hover {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  .container .row .testimonial-content {
+    width: 100%;
+  }
+  .container .row .testimonial-content h2 {
+    font-size: 24px !important;
+  }
+  .container .row .testimonial-content p {
+    font-size: 16px !important;
+    padding: 0 20px;
+  }
+  .container .row .testimonial-content .testi-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container .row .testimonial-content .testi-bottom p {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
 .video {
   width: 100%;
   padding: 60px 0;
@@ -751,14 +799,13 @@ footer .go-top:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .faq .container .row .faq-content .faq-content-left {
-  width: 480px;
+  max-width: 480px;
   padding: 0 30px;
 }
 .faq .container .row .faq-content .faq-content-left .faq__detail {
-  width: 360px;
+  max-width: 360px;
   border-bottom: 1px solid hsl(240, 5%, 91%);
   margin: 20px 0 0 0;
 }
@@ -785,7 +832,7 @@ footer .go-top:hover {
   margin-right: 20px;
 }
 .faq .container .row .faq-content .faq-content-left .faq__detail .faq__text {
-  width: 376px;
+  max-width: 376px;
   padding: 20px 38px;
 }
 .faq .container .row .faq-content .faq-content-left details[open] .faq__summary:before {
@@ -795,7 +842,7 @@ footer .go-top:hover {
   content: "-";
 }
 .faq .container .row .faq-content .faq-content-right {
-  width: 570px;
+  max-width: 570px;
 }
 .faq .container .row .faq-content .faq-content-right img {
   width: 100%;
@@ -833,6 +880,24 @@ footer .go-top:hover {
   bottom: 0;
 }
 
+@media (max-width: 320px) {
+  .container {
+    width: 100%;
+  }
+  .container .faq-header h2 {
+    font-size: 24px !important;
+  }
+}
+@media (max-width: 768px) {
+  .container .row .faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .container .row .faq-content .faq-content-left img {
+    width: 100%;
+  }
+}
 .events .container .row {
   padding: 120px 0 60px 0;
   display: flex;
