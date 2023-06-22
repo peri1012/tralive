@@ -4,7 +4,7 @@ main{
         width:100%;
         .container{
             .row{
-                padding-top: 100px;
+                padding-top: 60px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -30,8 +30,8 @@ main{
                                 height: 10px;
                                 background: #FFC800;
                                 width: 475px;
-                                display: inline-block;
-                                top: 72%;
+                                display:block;
+                                top: 15%;
                                 z-index: -1;        
                                 text-align: center;
                                 left: 0;
@@ -45,8 +45,9 @@ main{
                         margin-bottom: 30px;
                         font-family: 'Roboto', sans-serif;
                     }
-                    .hero-button{
-                        @include button(#0c0c1f,25px 60px);
+                    #hero-button{
+                        @include button( linear-gradient(to bottom, #00095e 0%, #0c0c1f 100%),25px 60px, #FFC800);
+                        
                     }
                 }
             }
@@ -56,42 +57,41 @@ main{
             justify-content: center;
             align-items: flex-end;
             width: 100%;
-            height: 700px;
+            height: 880px;
             background-image: url("../images/h1_hero1.png.webp");
             background-repeat: no-repeat;
-            background-position: top center;
             background-size: cover;
             .container{
                 .row{
-                    display: flex;
-                    justify-content: center;
+                    width:100%;
+                    height: 100%;
                     .car-moving{
                         position: relative;
-                        bottom:100px;
-                        animation: move 10s linear infinite alternate;
+                        bottom:130px;
+                        animation: move 5s linear infinite alternate;
                         img{
-                            width:610px;
-                            height:301px;
+                            width:100%;
+                            height:auto;
                         }
                         @keyframes move {
                             0%{
                                 transform: translate(0,0);
                             }
                             50%{
-                                transform: translate(-100px,0);
+                                transform: translate(-50px,0);
                             }
                             80%{
-                                transform: translate(100px,0);
+                                transform: translate(50px,0);
                             }
                             100%{
                                 transform: translate(0,0);
                             }
-                        }
                         }
                     }
                 }
             }
         }
     }
-    
+}
+
 

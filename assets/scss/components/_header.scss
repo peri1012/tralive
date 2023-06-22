@@ -31,13 +31,16 @@ header{
                     }
                 }
                 .phone{
-                    @include button(#FFC800,13px 30px);
+                    @include button(#FFC800,13px 30px, #00095E);
                     font-family: "Josefin Sans",sans-serif;
                     &:hover{
                         opacity: 0.8;
                         color:#fff;
                         text-decoration: none;
                         text-underline-offset:0;
+                        &::before{
+                            display: none;
+                        }
                     }
                 }
             }

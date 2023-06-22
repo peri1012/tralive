@@ -1,0 +1,9 @@
+@import '../mixins';
+main{
+    .event-heros{
+        @include heros(url('../images/h1_hero2.jpg.webp'));
+    }
+
+}
+
+

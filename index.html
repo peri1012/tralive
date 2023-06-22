@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -31,18 +32,18 @@
                     </ul>
                 </li>
                 <li class="menu-item"><a href="contact.html">Contact</a></li>
-                <li class="menu-item"><a href="#" class="phone"><i class="fa-solid fa-phone"></i> +10 (67) 678 2567</a></li>
+                <li class="menu-item"><a href="tel:+10 (67) 678 2567" target="_blank" class="phone"><i class="fa-solid fa-phone"></i> +10 (67) 678 2567</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" data-aos="fade-up" data-aos-anchor-placement="top-bottom" >
             <div class="container">
                 <div class="row">
-                    <div class="hero-details">
+                    <div class="hero-details ">
                         <h1>Lifelong memories just a <span>few seconds away</span></h1>
                         <p>Let's start your journey with us, your dream will come true</p>
-                        <a href="" class="hero-button">Explore Destinations</a>
+                        <a href="" id="hero-button">Explore Destinations</a>
                     </div>
                 </div>
             </div>
@@ -54,9 +55,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </section>
         <section class="events">
             <div class="container">
@@ -67,7 +66,7 @@
                     </div>
                     <div class="slider-cards">
                         <div class="card">
-                            <div class="card-image">
+                            <div class="card-image ">
                                 <img src="./assets/images/services1.jpg.webp" alt="">
                             </div>
                             <div class="card-info">
@@ -85,12 +84,12 @@
                         </div>
                         <div class="card">
                             <div class="card-image">
-                                <img src="./assets/images/services1.jpg.webp" alt="">
+                                <img src="./assets/images/services2.jpg.webp" alt="">
                             </div>
                             <div class="card-info">
                                 <div class="card-info-top">
                                     <h3>
-                                        <a href="#">Mega Turkey</a>
+                                        <a href="#">Filande</a>
                                     </h3>
                                     <span>$1200</span>
                                 </div>
@@ -102,12 +101,12 @@
                         </div>
                         <div class="card">
                             <div class="card-image">
-                                <img src="./assets/images/services1.jpg.webp" alt="">
+                                <img src="./assets/images/services3.jpg.webp" alt="">
                             </div>
                             <div class="card-info">
                                 <div class="card-info-top">
                                     <h3>
-                                        <a href="#">Mega Turkey</a>
+                                        <a href="#">Spitzberg</a>
                                     </h3>
                                     <span>$1200</span>
                                 </div>
@@ -129,7 +128,7 @@
                     </div>
                     <div class="about-content">
                         <span>About Us</span>
-                        <h2>Get ready for real <br> time adventure</h2>
+                        <h2>Get ready for real time adventure</h2>
                         <p>Lets start your journey with us, your dream will come  true. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
                         <a href="" class="about-button">Book Your Destinations</a>
                     </div>
@@ -141,7 +140,7 @@
                 <div class="row">
                     <div class="testimonial-content">
                         <h2>What customers say</h2>
-                        <p>"Lets start your journey with us, your dream will come true. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>"Let's start your journey with us, your dream will come true. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="testi-bottom">
                             <div class="testi-bottom-left">
                                 <img src="./assets/images/founder-img.png.webp" alt="">
@@ -196,7 +195,7 @@
                 <div class="row">
                     <div class="video-play">
                         <div class="play-image">
-                            <a href="#"><img src="./assets/images/play-butto.svg" alt=""></a>
+                            <a href="https://www.youtube.com/watch?v=GHEiHCO5tJs" target="_blank"><img src="./assets/images/play-butto.svg" alt=""></a>
                         </div>
                         <h3>Watch our last tour</h3>
                     </div>
@@ -254,39 +253,39 @@
                 <div class="footer-top">
                     <div class="footer-part">
                         <a href="index.html"><img src="./assets/images/logo2_footer.png.webp" alt=""></a>
-                        <p>Land behold it created good saw after<br> she'd Our set living. Signs midst<br> dominion creepeth morning laboris nisi<br> ufsit aliquip.</p>
+                        <p>Land behold it created good saw after she'd Our set living. Signs midst dominion creepeth morning laboris nisi ufsit aliquip.</p>
                         <div class="social-medias">
-                            <a href=""><i class="fa-brands fa-square-twitter"></i></a>
-                            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                            <a href=""><i class="fa-brands fa-square-pinterest"></i></a>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="https://az.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-square-pinterest"></i></a>
                         </div>
                     </div>
                     <div class="footer-part">
                         <h4>Navigation</h4>
                         <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">Contact</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-part">
                         <h4>Services</h4>
                         <ul>
-                            <li><a href="">Blackforest</a></li>
-                            <li><a href="">Bodhubon</a></li>
-                            <li><a href="">Rongdhonu</a></li>
-                            <li><a href="">Meghrong</a></li>
+                            <li><a href="#">Blackforest</a></li>
+                            <li><a href="#">Bodhubon</a></li>
+                            <li><a href="#">Rongdhonu</a></li>
+                            <li><a href="#">Meghrong</a></li>
                         </ul>
                     </div>
                     <div class="footer-part">
                         <h4>Contact Us</h4>
                         <ul>
-                            <li><a href="">76/A, Green Lane,<br> Dhanmondi, NYC</a></li>
-                            <li><a href="mailto:demomail89@gmail.com">demomail89@gmail.com</a></li>
-                            <li><a href="" class="mobile-phone">+10 (78) 738-9083</a></li>
+                            <li><a href="https://www.google.com/maps/search/76%2FA,+Green+Lane,+Dhanmondi,+NYC/@24.259034,-36.529768,3z/data=!3m1!4b1?entry=ttu" target="_blank">76/A, Green Lane, Dhanmondi, NYC</a></li>
+                            <li><a href="mailto:demomail89@gmail.com" target="_blank">demomail89@gmail.com</a></li>
+                            <li><a href="tel:+10 (78) 738-9083" target="_blank" class="mobile-phone">+10 (78) 738-9083</a></li>
                         </ul>
                     </div>
                 </div>
@@ -306,7 +305,10 @@
         </div>
     </footer>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://kit.fontawesome.com/7b89daf135.js" crossorigin="anonymous"></script>
 </body>
 </html>
