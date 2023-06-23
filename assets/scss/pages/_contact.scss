@@ -31,7 +31,7 @@ main{
                     flex-direction: row;
                     justify-content: space-between;
                     .contact-right{
-                        max-width: 770px;
+                        width: 60%;
                         form{
                             display: flex;
                             flex-direction: column;
@@ -80,7 +80,7 @@ main{
                         }
                     }
                     .contact-left{
-                        max-width:300px;
+                        width:300px;
                         display: flex;
                         flex-direction: column;
                         gap:30px;
@@ -128,12 +128,14 @@ main{
 @media (max-width:768px){
     .contact-form{
         height:100%;
-
+        padding-top: 0 !important;
         .contact{
             display: flex;
             flex-direction: column !important;
             gap:30px;
-    
+            .contact-right{
+                width: 100% !important;
+            }
         }
     }
 }

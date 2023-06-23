@@ -9,7 +9,7 @@ main{
                 justify-content: center;
                 align-items: center;
                 .hero-details{
-                    width:770px;
+                    max-width:770px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -29,7 +29,7 @@ main{
                                 content: "";
                                 height: 10px;
                                 background: #FFC800;
-                                width: 475px;
+                                max-width: 475px;
                                 display:block;
                                 top: 15%;
                                 z-index: -1;        
@@ -94,8 +94,48 @@ main{
     }
 }
 
-// @media (max-width:1024px){
-//     .container{
-//         width:960px;
-//     }
-// }
+@media (max-width:768px){
+    .container{
+        width:100%;
+        .hero-details{
+            width: 100%;
+            h1{ 
+                
+            font-size: 30px;
+            text-align: center;
+            span{
+                &::before{
+                    position:relative;
+                    
+                    display:block;
+                    top: 50% !important;
+                }
+            }
+        }
+    }
+}
+}
+@media (max-width:500px){
+    .container{
+        width:100%;
+        .hero-details{
+            h1{ 
+                
+            font-size: 30px !important;
+            text-align: center;
+            span{
+                &::before{
+                    position:relative;
+                    
+                    display:block;
+                    top: 50% !important;
+                }
+            }
+            }
+            p{
+                text-align: center ;
+            }
+        }
+       
+    }
+}
