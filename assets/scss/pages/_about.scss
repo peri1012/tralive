@@ -1,6 +1,5 @@
 @import '../mixins';
 main{
-    padding-top: 100px;
     .heros{
         @include heros(url('../images/h1_hero4.jpg.webp'));
     }

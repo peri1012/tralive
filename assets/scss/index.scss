@@ -1,8 +1,13 @@
+//global
 @import '../scss/base';
+
+//pages
 @import '../scss/pages/home';
 @import '../scss/pages/about';
 @import '../scss/pages/events-page';
 @import '../scss/pages/contact';
+
+//components
 @import '../scss/components/header';
 @import '../scss/components/footer';
 @import '../scss/components/instagram';
@@ -11,4 +16,6 @@
 @import '../scss/components/video';
 @import '../scss/components/faq';
 @import '../scss/components/events';
+
+//mixins
 @import '../scss/mixins';
